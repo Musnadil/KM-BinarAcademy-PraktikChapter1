@@ -1,4 +1,4 @@
-package latihahanChallange1
+package latihan1KGBGame
 
 class KGBGame {
     fun welcomeUser(user:String){
@@ -14,6 +14,10 @@ class KGBGame {
                 "#  3. Paper                     #\n" +
                 "=================================")
 
+        rules(user)
+    }
+
+    fun rules(user:String){
         // masukan dari user
         print("Enter your choice : ")
         var userChoice = readLine().toString().toInt()
@@ -22,20 +26,20 @@ class KGBGame {
             1 -> "rock"
             2 -> "scissor"
             3 -> "paper"
-            else -> "Choose Between Numbers 1 to 3"
+            else -> {
+                println("you only have 3 choices")
+                welcomeUser(user)
+            }
 
         }
         // pilihan random dari cpu
-        val pilihan = arrayOf("rock","scissor","paper")
-        var cpu = pilihan.random()
+        val computer = arrayOf("rock","scissor","paper")
+        var cpu = computer.random()
 
-        rules(pilihanUser,cpu,userChoice,user)
-    }
-
-    fun rules(pilihanUser:String,cpu:String,userChoice:Int,user:String){
         // manampilkan pilihan user dan cpu
-        if(userChoice >3){
-            println(pilihanUser)
+        if(userChoice > 3){
+            pilihanUser
+
         }else{
             println("$user Choice : ${pilihanUser}")
             println("CPU Choice : ${cpu}")

@@ -1,4 +1,4 @@
-package latihahanChallange1
+package latihan1KGBGame
 
 //fun main() {
 //    val list1 = listOf("ab", "bc", "cd", "de", "ef")
